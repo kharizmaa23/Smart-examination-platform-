@@ -25,7 +25,7 @@
 9. [Feature List](#9-feature-list)
 10. [Novelty](#10-novelty)
 11. [Testing & Verification](#11-testing--verification)
-12. [Deployment](#12-deployment)
+
 
 ---
 
@@ -591,61 +591,3 @@ RKV NEXUS AI combines the following in one integrated system:
 
 ---
 
-## 12. Deployment
-
-> The original documentation listed this section in the table of contents but did not include its content. Replace the placeholders below with your actual setup.
-
-### Prerequisites
-- Docker & Docker Compose
-- Python 3.12
-- Node.js (LTS)
-- PostgreSQL with the `pgvector` extension
-
-### Quick Start
-
-```bash
-# Clone the repository
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
-
-# Configure environment variables
-cp .env.example .env   # add DB URL, JWT secret, Gemini API key, etc.
-
-# Run with Docker
-docker compose up --build
-```
-
-### Backend (without Docker)
-
-```bash
-cd backend
-python -m venv venv && source venv/bin/activate
-pip install -r requirements.txt
-alembic upgrade head
-uvicorn app.main:app --reload
-```
-
-### Frontend (without Docker)
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-### Run Tests
-
-```bash
-cd backend
-pytest
-```
-
----
-
-## 📄 License
-
-Add your license here (e.g., MIT).
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome. Please open an issue or submit a pull request.
